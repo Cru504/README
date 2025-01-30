@@ -97,14 +97,6 @@
                 <p><strong>Inglés:</strong> I love you so much.</p>
                 <p><strong>Francés:</strong> Je t'aime beaucoup.</p>
                 <p><strong>Italiano:</strong> Ti amo tanto.</p>
-                <p><strong>Alemán:</strong> Ich liebe dich sehr.</p>
-                <p><strong>Portugués:</strong> Eu te amo muito.</p>
-                <p><strong>Japonés:</strong> 大好きだよ (Daisuki da yo).</p>
-                <p><strong>Chino (Mandarín):</strong> 我很爱你 (Wǒ hěn ài nǐ).</p>
-                <p><strong>Coreano:</strong> 사랑해 (Saranghae).</p>
-                <p><strong>Ruso:</strong> Я тебя очень люблю (Ya tebya ochen' lyublyu).</p>
-                <p><strong>Árabe:</strong> أحبك كثيراً (Uhibbuka kathiran).</p>
-                <p><strong>Hindi:</strong> मैं तुमसे बहुत प्यार करता हूँ (Main tumse bahut pyaar karta hoon).</p>
                 <p>Espero que esto te haga sonreír, porque tu felicidad es lo más importante para mí.</p>
                 <p>Atentamente,</p>
                 <p>Batman 🦇</p>
