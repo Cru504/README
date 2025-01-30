@@ -92,12 +92,11 @@
             <h1>Para Ti 💌</h1>
             <div class="message">
                 <p>Querida Michelle,</p>
-                <p>Quiero que sepas cuánto te quiero en varios idiomas:</p>
+                <p>Quiero que sepas cuánto te quiero en diferntes idiomas:</p>
                 <p><strong>Español:</strong> Te quiero mucho.</p>
                 <p><strong>Inglés:</strong> I love you so much.</p>
                 <p><strong>Francés:</strong> Je t'aime beaucoup.</p>
-                <p><strong>Italiano:</strong> Ti amo tanto.</p>
-                <p>Espero que esto te haga sonreír, porque tu felicidad es lo más importante para mí.</p>
+            <p>Espero que esto te haga sonreír.</p>
                 <p>Atentamente,</p>
                 <p>Batman 🦇</p>
             </div>
@@ -106,7 +105,7 @@
                 <button class="no" onmouseover="moverBotonNo()" onclick="desvanecerBotonNo()">No</button>
             </div>
             <div id="mensajeOculto" class="hidden-message">
-                ¡Sabía que dirías que sí! 💖 ¿También me quieres?
+                ¡Porque le diste al si?? JAJAJAJ te quiero! 💖 
             </div>
         </div>
     </div>
