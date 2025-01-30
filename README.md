@@ -53,6 +53,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 5px;
+            transition: opacity 0.3s ease;
         }
         .buttons button.yes {
             background-color: #2ecc71;
@@ -67,6 +68,22 @@
             0% { transform: rotateY(-180deg); }
             100% { transform: rotateY(0deg); }
         }
+        .flower {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+            display: none; /* Oculto inicialmente */
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #e74c3c;
+        }
     </style>
 </head>
 <body>
@@ -79,20 +96,38 @@
                 <p><strong>Español:</strong> Te quiero mucho.</p>
                 <p><strong>Inglés:</strong> I love you so much.</p>
                 <p><strong>Francés:</strong> Je t'aime beaucoup.</p>
+                <p><strong>Italiano:</strong> Ti amo tanto.</p>
+                <p><strong>Alemán:</strong> Ich liebe dich sehr.</p>
+                <p><strong>Portugués:</strong> Eu te amo muito.</p>
+                <p><strong>Japonés:</strong> 大好きだよ (Daisuki da yo).</p>
+                <p><strong>Chino (Mandarín):</strong> 我很爱你 (Wǒ hěn ài nǐ).</p>
+                <p><strong>Coreano:</strong> 사랑해 (Saranghae).</p>
+                <p><strong>Ruso:</strong> Я тебя очень люблю (Ya tebya ochen' lyublyu).</p>
+                <p><strong>Árabe:</strong> أحبك كثيراً (Uhibbuka kathiran).</p>
+                <p><strong>Hindi:</strong> मैं तुमसे बहुत प्यार करता हूँ (Main tumse bahut pyaar karta hoon).</p>
+                <p>Espero que esto te haga sonreír, porque tu felicidad es lo más importante para mí.</p>
+                <p>Atentamente,</p>
+                <p>Batman 🦇</p>
             </div>
             <div class="buttons">
                 <button class="yes" onclick="mostrarMensaje()">Sí</button>
-                <button class="no" onmouseover="moverBotonNo()">No</button>
+                <button class="no" onmouseover="moverBotonNo()" onclick="desvanecerBotonNo()">No</button>
             </div>
-            <div id="mensajeOculto" style="display: none; margin-top: 15px; font-size: 1rem; color: #e74c3c;">
-                ¡Sabía que dirías que sí! 💖
+            <div id="mensajeOculto" class="hidden-message">
+                ¡Sabía que dirías que sí! 💖 ¿También me quieres?
             </div>
         </div>
     </div>
+    <div id="florDinamica" class="flower">🌸</div>
+
     <script>
+        // Función para mostrar el mensaje oculto y la flor dinámica
         function mostrarMensaje() {
             document.getElementById('mensajeOculto').style.display = 'block';
+            document.getElementById('florDinamica').style.display = 'block';
         }
+
+        // Función para mover el botón "No"
         function moverBotonNo() {
             const botonNo = document.querySelector('.no');
             const x = Math.random() * (window.innerWidth - botonNo.offsetWidth);
@@ -100,6 +135,15 @@
             botonNo.style.position = 'absolute';
             botonNo.style.left = `${x}px`;
             botonNo.style.top = `${y}px`;
+        }
+
+        // Función para desvanecer el botón "No"
+        function desvanecerBotonNo() {
+            const botonNo = document.querySelector('.no');
+            botonNo.style.opacity = '0';
+            setTimeout(() => {
+                botonNo.style.display = 'none';
+            }, 300); // Espera a que termine la transición de opacidad
         }
     </script>
 </body>
