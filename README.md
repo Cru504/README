@@ -31,7 +31,7 @@
             max-width: 600px;
             width: 90%;
             transform-style: preserve-3d;
-            transform-origin: left;
+            transform-origin: center; /* Cambiado a "center" para que gire desde el centro */
             animation: openCard 2s ease-in-out forwards;
             position: relative;
         }
@@ -56,6 +56,25 @@
             color: #e74c3c;
             font-size: 2rem;
             animation: beat 1.5s infinite;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .buttons button.yes {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .buttons button.no {
+            background-color: #e74c3c;
+            color: white;
         }
         @keyframes openCard {
             0% { transform: rotateY(0); }
@@ -114,6 +133,13 @@
                 <p>Con todo mi cariño,</p>
                 <p>Batman</p>
             </div>
+            <div class="buttons">
+                <button class="yes" onclick="mostrarMensaje()">Sí</button>
+                <button class="no" onmouseover="moverBotonNo()">No</button>
+            </div>
+            <div id="mensajeOculto" style="display: none; margin-top: 20px; font-size: 1.2rem; color: #e74c3c;">
+                ¡Sabía que dirías que sí! 💖
+            </div>
             <div class="heart">❤️</div>
         </div>
     </div>
@@ -139,6 +165,21 @@
                 document.body.appendChild(confetti);
             }
         });
+
+        // Función para mostrar el mensaje oculto
+        function mostrarMensaje() {
+            document.getElementById('mensajeOculto').style.display = 'block';
+        }
+
+        // Función para mover el botón "No"
+        function moverBotonNo() {
+            const botonNo = document.querySelector('.no');
+            const x = Math.random() * (window.innerWidth - botonNo.offsetWidth);
+            const y = Math.random() * (window.innerHeight - botonNo.offsetHeight);
+            botonNo.style.position = 'absolute';
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
+        }
     </script>
 </body>
 </html>
